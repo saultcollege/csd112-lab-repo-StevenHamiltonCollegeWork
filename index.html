@@ -34,17 +34,17 @@
             <h1>Welcome to Steven Hamilton's Website!</h1>
             <a target="_blank" href="images/picture_of_me_300w.jpg">
                 <img src="images/picture_of_me_150w.jpg" alt="Picture of me" sizes="(max-width:500px) 150px, 300px"
-                    srcset="images/picture_of_me_150w.jpg , images/picture_of_me_300w.jpg">
+                    srcset="images/picture_of_me_150w.jpg 150w, images/picture_of_me_300w.jpg 300w">
             </a>
             <p>Hello, I am Steven i enjoy programming</p>
             <p>I also enjoy playing games.</p>
             <h2>My Favourite Things</h2>
-            <a href="https://oldschool.runescape.com">
-                <figure>
+            <figure>
+                <a href="https://oldschool.runescape.com">
                     <img src="images/logo.png" alt="Old school runescape logo">
-                    <figcaption>Old school runescape logo</figcaption>
-                </figure>
-            </a>
+                </a>
+                <figcaption>Old school runescape logo</figcaption>
+            </figure>
             <h3>Video Games</h3>
             <ol>
                 <li>Diablo 2 LoD</li>
@@ -66,6 +66,7 @@
                 <source
                     src="http://www.archive.org/download/autobiographyofathief_1412_librivox/autobiographyofathief_01_hapgood_128kb.mp3"
                     type="audio/aac">
+                <a href="http://www.archive.org/download/autobiographyofathief_1412_librivox/autobiographyofathief_01_hapgood_128kb.mp3">Download the audiobook</a>
             </audio>
             <br>
             <a
@@ -73,7 +74,7 @@
                 the book </a>
             <h3>Youtube Video</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/094y1Z2wpJg"
-                title="YouTube video player" frameborder="0"
+                title="YouTube video player" style="border:0;"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </main>
@@ -85,14 +86,15 @@
             </blockquote>
             <p>&#169; 2021
                 <a href="mailto:21069794@saultcollege.ca?subject=Message%20from%20CSD120%20Website">Steven Hamilton</a>
+            </p>
                 <br>
                 <picture>
                     <source srcset="images/sc-logo.svg" type="image/svg+xml">
                     <img src="images/sc-logo.png" width="70" alt="Sault College logo"
-                        srcset="images/sc-logo@1.5x.png 1.5x, images/sc-logo@2x.png 2x">
+                        srcset="images/sc-logo.png, images/sc-logo@1.5x.png 1.5x, images/sc-logo@2x.png 2x">
                 </picture>
         </footer>
-        <a href=#top title="Back to top">◤</a>
+        <a href="#top" title="Back to top">◤</a>
     </div>
 </body>
 
