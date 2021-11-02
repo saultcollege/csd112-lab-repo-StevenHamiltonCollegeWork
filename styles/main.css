@@ -1,0 +1,46 @@
+li.useful-links{
+    display: block;
+}
+.nav-links{
+    padding-top: 16px;
+}
+.nav-links:hover{
+    border-top: 4px solid rgba(0, 0,0, 0.25);
+}
+p::first-letter{
+    font-size: 32px;
+    font-family: serif;
+    background: rgba(0, 0,0, 0.05);
+    width: 50vw;
+    height: 50vw;
+    color: #6d4211;
+}
+.bottom-header{
+    border-top: 3px dotted red;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    max-width: 890px;
+    min-width: 300px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+dt::after{
+    content: ":";
+}
+tr:nth-child(even){
+    background-color: rgba(0, 0,0, 0.15);
+}
+.radio-buttons input[type="radio"] + label{
+
+    display: inline;
+}
+input[type="submit"]{
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: #7b4f17;
+    background-color: black;
+}
