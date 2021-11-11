@@ -1,3 +1,10 @@
+html {
+    box-sizing: border-box;
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
 body {
     box-sizing: border-box;
     background-color: #382418;
@@ -7,9 +14,13 @@ body {
 }
 header{
     border-top: 4px solid rgba(0, 0,0, 0.1);
-    border-bottom: 1px dotted rgba(0, 0,0, 0.3);
     margin-left: -2rem;
     margin-right: -2rem;
+}
+header nav {
+    border-bottom: 1px dotted rgba(0, 0,0, 0.3);
+    margin-left: 2em;
+    margin-right: 2em;
 }
 h1{
     color: black;
@@ -22,23 +33,26 @@ h3{
 }
 a:link{
     color: #7b4f17;
-    margin: 0.5rem;
 }
 a:visited{
     color: purple;
 }
-li{
+header nav ul {
+    margin: 0;
+    padding: 0; 
+}
+header nav li{
     display: inline;
 }
 .width-wrap{
     border: 1px solid rgba(0, 0,0, 0.3);
     border-top: none;
-    margin-top: 0rem;
     margin-right: 3rem;
     margin-left: 3rem;
     margin-bottom: 3rem;
     padding: 2rem;
-    max-width: 960;
+    padding-top: 0;
+    max-width: 960px;
     margin-bottom: 3rem;
     background-color: #b9a06d;
 }
@@ -54,7 +68,7 @@ th ,td{
 td{
     background-color: rgba(0, 0,0, 0.05);
 }
-th, tfoot{
+th, tfoot td, thead td {
     background-color: rgba(0, 0,0, 0.2);
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
@@ -62,12 +76,12 @@ th, tfoot{
     padding-right: 1rem;
 }
 
-
-li.useful-links{
-    display: block;
-}
 .nav-links{
     padding-top: 16px;
+    padding-bottom: 0.5em;
+    display: inline-block;
+    margin: -4px 1em 0 1em;
+    border-top: 4px solid transparent;
 }
 .nav-links:hover{
     border-top: 4px solid rgba(0, 0,0, 0.25);
@@ -81,24 +95,31 @@ p::first-letter{
     color: #6d4211;
 }
 .bottom-header{
-    border-top: 3px dotted red;
-    border-bottom: none;
+    border-bottom: 3px dotted red;
+    border-top: none;
     border-left: none;
     border-right: none;
     max-width: 890px;
     min-width: 300px;
     margin-top: 3rem;
     margin-bottom: 2rem;
+    width: 50vw;
 }
 dt::after{
     content: ":";
 }
-tr:nth-child(even){
+::selection {
+    background-color: #ffffff80;
+}
+tr:nth-child(even) td {
     background-color: rgba(0, 0,0, 0.15);
 }
 .radio-buttons input[type="radio"] + label{
 
     display: inline;
+}
+form :invalid {
+    background-color: #ff000080;
 }
 input[type="submit"]{
     border: none;
