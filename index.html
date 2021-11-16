@@ -7,6 +7,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="manifest" href="images/favicon/site.webmanifest">
     <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;500&display=swap" rel="stylesheet">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
@@ -25,102 +28,116 @@
     <div class="width-wrap">
         <header id="top">
             <nav>
-                <ul>
-                    <li> <a class="nav-links" style="border-top: 4px solid #7b4f17;" href="index.html">Home</a></li>
-                    <li> <a class="nav-links" href="links.html">Links</a></li>
-                    <li> <a class="nav-links" href="glossary.html">Glossary</a></li>
-                    <li> <a class="nav-links" href="survey.html">Survey</a></li>
+                <ul style="padding: 0%;">
+                    <li
+                        style="padding-left: 1rem; background-image: url(images/link.png); background-repeat: no-repeat; background-size: 10px 10px; background-position: left; background-position-y: center;">
+                        <a class="nav-links" style="border-top: 4px solid #7b4f17;" href="index.html">Home</a></li>
+                    <li
+                        style="padding-left: 1rem; background-image: url(images/link.png); background-repeat: no-repeat; background-size: 10px 10px; background-position: left; background-position-y: center;">
+                        <a class="nav-links" href="links.html">Links</a></li>
+                    <li
+                        style="padding-left: 1rem; background-image: url(images/link.png); background-repeat: no-repeat; background-size: 10px 10px; background-position: left; background-position-y: center;">
+                        <a class="nav-links" href="glossary.html">Glossary</a></li>
+                    <li
+                        style="padding-left: 1rem; background-image: url(images/link.png); background-repeat: no-repeat; background-size: 10px 10px; background-position: left; background-position-y: center;">
+                        <a class="nav-links" href="survey.html">Survey</a></li>
+                    <li
+                        style="padding-left: 1rem; background-image: url(images/link.png); background-repeat: no-repeat; background-size: 10px 10px; background-position: left; background-position-y: center;">
+                        <a class="nav-links" href="lorem.html">Lorem</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <h1>Welcome to Steven Hamilton's Website!</h1>
-            <a target="_blank" href="images/picture_of_me_300w.jpg">
-                <img src="images/picture_of_me_150w.jpg" alt="Picture of me" sizes="(max-width:500px) 150px, 300px"
-                    srcset="images/picture_of_me_150w.jpg 150w, images/picture_of_me_300w.jpg 300w">
-            </a>
-            <p>Hello, I am Steven i enjoy programming</p>
-            <p>I also enjoy playing games.</p>
-            <h2>My Favourite Things</h2>
-            <table>
-                <caption>Table 1. Current Courses</caption>
-                <thead>
-                <tr>
-                    <th rowspan="2" scope="col">Term</th>
-                    <th colspan="3" scope="colgroup">Course</th>
-                </tr>
-                <tr>
-                    <th scope="col">Code</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Hrs/Week</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th rowspan="6" scope="rowgroup">Fall</th>
-                    <td>TNY130</td>
-                    <td>Technology in society</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>CMM115</td>
-                    <td>Communications I</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>CSD120</td>
-                    <td>Introduction to Web Development</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>CSD110</td>
-                    <td>Introduction to Programming</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>CSD111</td>
-                    <td>Computing Environments and Tooling</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>MTH123</td>
-                    <td>Computer Mathematics</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <th rowspan="6" scope="rowgroup">Winter</th>
-                    <td>CAS103</td>
-                    <td>Business Applications I</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>CSD121</td>
-                    <td>Programming Concepts I</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>CSD122</td>
-                    <td>Hardware, OS, and Networks</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>CSD123</td>
-                    <td>Databases I</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>CSD124</td>
-                    <td>Systems Analysis and Design</td>
-                    <td>3</td>
-                </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <th colspan="3" scope="row">Total</th>
-                    <td>40</td>
-                </tr>
-                </tfoot>
-            </table>
+            <div class="bio">
+                <a target="_blank" href="images/picture_of_me_300w.jpg">
+                    <img class="picofme" src="images/picture_of_me_150w.jpg" alt="Picture of me"
+                        sizes="(max-width:500px) 150px, 300px"
+                        srcset="images/picture_of_me_150w.jpg 150w, images/picture_of_me_300w.jpg 300w">
+                </a>
+                <p>Hello, I am Steven i enjoy programming</p>
+                <p>I also enjoy playing games.</p>
+                <h2>My Favourite Things</h2>
+                <table>
+                    <caption>Table 1. Current Courses</caption>
+                    <thead>
+                        <tr>
+                            <th rowspan="2" scope="col">Term</th>
+                            <th colspan="3" scope="colgroup">Course</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Code</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Hrs/Week</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="6" scope="rowgroup">Fall</th>
+                            <td>TNY130</td>
+                            <td>Technology in society</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CMM115</td>
+                            <td>Communications I</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>CSD120</td>
+                            <td>Introduction to Web Development</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>CSD110</td>
+                            <td>Introduction to Programming</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>CSD111</td>
+                            <td>Computing Environments and Tooling</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>MTH123</td>
+                            <td>Computer Mathematics</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="6" scope="rowgroup">Winter</th>
+                            <td>CAS103</td>
+                            <td>Business Applications I</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>CSD121</td>
+                            <td>Programming Concepts I</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>CSD122</td>
+                            <td>Hardware, OS, and Networks</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>CSD123</td>
+                            <td>Databases I</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>CSD124</td>
+                            <td>Systems Analysis and Design</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3" scope="row">Total</th>
+                            <td>40</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
             <figure>
                 <a href="https://oldschool.runescape.com">
                     <img src="images/logo.png" alt="Old school runescape logo">
@@ -128,7 +145,7 @@
                 <figcaption>Old school runescape logo</figcaption>
             </figure>
             <h3>Video Games</h3>
-            <ol>
+            <ol type="I">
                 <li>Diablo 2 LoD</li>
                 <li>Osrs(Old School Runescape)</li>
                 <li>Rimworld</li>
@@ -178,7 +195,7 @@
                     srcset="images/sc-logo.png, images/sc-logo@1.5x.png 1.5x, images/sc-logo@2x.png 2x">
             </picture>
         </footer>
-        <a href="#top" title="Back to top">◤</a>
+        <a style="text-decoration: none;" href="#top" title="Back to top">◤</a>
     </div>
 </body>
 
