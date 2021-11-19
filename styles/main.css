@@ -32,6 +32,8 @@ footer{
 }
 a[href$="top"] {
     text-shadow: 1px 1px black;
+}
+a[href$="top"]:hover {
     text-decoration: none;
 }
 body {
