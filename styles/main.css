@@ -19,9 +19,8 @@ ul{
     padding: none;
     list-style-type: none;
 }
-.bio{
-    column-count: 3;
-    column-gap: 2rem;
+.bio ~ a {
+    display: block;
 }
 footer{
     font-size: 75%;
@@ -71,6 +70,82 @@ h2{
     font-family: monospace;
     color: #382418;
 }
+#go-to-top{
+    margin-left: -25px;
+    position: sticky;
+    display: inline-block;
+}
+#go-to-top:hover{
+    transform: rotate(45deg);
+}
+.paperclip{
+    position: absolute;
+    left: 1px;
+    background: transparent;
+    box-shadow: none;
+}
+.col-span-2{
+    grid-column: 1/span 2;
+}
+.row-span-2{
+    grid-row: 1/span 2;
+}
+.gallery ~ a{
+    width: 100%;
+    height: 100%;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+.firstpicture{
+    width: 300px;
+    height: 600px;
+}
+.tenthpicture{
+    width: 600px;
+    height: 600px;
+}
+.favourites{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    align-content: space-between;
+    justify-content: space-between;
+}
+label ~ div{
+    display: none;
+}
+#tab1,#tab2,#tab3,#tab4,#tab5,#tab6{
+    display: none;
+}
+#tab1:checked ~ #firstdiv {
+    display: flex;
+    width: 100%;
+}
+#tab2:checked ~ #seconddiv {
+    display: flex;
+    width: 100%;
+}
+#tab3:checked ~ #thirddiv {
+    display: flex;
+    width: 100%;
+}
+#tab4:checked ~ #fourthdiv {
+    display: flex;
+    width: 100%;
+}
+#tab5:checked ~ #fifthdiv {
+    display: flex;
+    width: 100%;
+}
+#tab6:checked ~ #sixthdiv {
+    display: flex;
+    width: 100%;
+}
 h3{
     font-family: monospace;
     color: #342c20;
@@ -91,11 +166,15 @@ a:visited{
     color: purple;
 }
 header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0; 
 }
 header nav li{
-    display: inline;
+    list-style-type: none;
 }
 .width-wrap{
     border: 1px solid rgba(0, 0,0, 0.3);
@@ -113,7 +192,6 @@ label{
     display: block;
 }
 td{
-    border-collapse: collapse;
     background-color: rgba(0, 0,0, 0.05);
 }
 th ,td{
@@ -132,6 +210,8 @@ th, tfoot td, thead td {
 }
 
 table{
+    max-width: 100%;
+    border-collapse: collapse;
     column-span: all;
     margin-top: 1rem;
     caption-side: bottom;
@@ -144,7 +224,7 @@ table{
     text-decoration: none;
     padding-top: 16px;
     padding-bottom: 0.5em;
-    display: inline-block;
+    display: flex;
     margin: -4px 1em 0 1em;
     border-top: 4px solid transparent;
 }
