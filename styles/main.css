@@ -75,6 +75,9 @@ h2{
     font-family: monospace;
     color: #382418;
 }
+@keyframes tophover{
+    100% {transform: rotate(45deg);}
+}
 a[href="#top"] {
     margin-left: -25px;
     position: sticky;
@@ -82,14 +85,15 @@ a[href="#top"] {
     display: inline-block;
 }
 a[href="#top"]:hover{
-    transform: rotate(45deg);
+    animation-name: tophover;
+    animation-duration: 200ms;
 }
 .bio {
-    column-count: 3;
+    column-width: 13em;
 }
 .bio a {
     position:relative;
-    display: block;
+    display:inline-block;
 }
 .paperclip{
     position: absolute;
@@ -111,16 +115,62 @@ a[href="#top"]:hover{
     display: block;
     object-fit: cover;
 }
+@keyframes galhover{
+   100% {transform: scale(1.1);}
+}
 .gallery img:hover {
-    transform: scale(1.1);
+    animation-name: galhover;
+    animation-duration: 200ms;
 }
 .gallery{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat( auto-fill,minmax(180px, auto));
     grid-row-gap: 10px;
     grid-column-gap: 10px;
 }
 
+@media screen and (max-width: 450px) {
+    .col-span-2{
+        grid-column: span 1;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #schooltable > th, tfoot, thead{
+        display: none;
+    }
+    #schooltable{
+        caption-side: top;
+    }
+    #schooltable, td{
+        display: block;
+        padding-bottom: 0;
+        padding-top: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    } 
+    #schooltable > tr > td:first-child{
+        padding-top: 0.3em;
+        font-weight: bold;
+    }
+    #schooltable > tr > td:last-child{
+        padding-bottom: 0.3em;
+        font-style: italic;
+        font-size: 0.8em;
+    }
+    #schooltable, td::after{
+        content: " hrs/wk";
+    }   
+}
+@media only screen and (max-width: 800px) {
+    #favourites{
+        flex-direction: column;
+    }
+    #favourites > label{
+        order: 0;
+    }
+    
+}
 .favourites{
     display: flex;
     flex-direction: row;
@@ -165,6 +215,60 @@ a:link{
 }
 a:visited{
     color: purple;
+}
+@media screen and (max-width:630px) {
+    #navbar > ul {
+        flex-direction: column;
+        align-items: center;
+        height: 0;
+        overflow: hidden;
+    }
+    #navbar > ul > li > a {
+        padding-top: 0.5em;
+        border-top: none;
+    }
+    #navbar > ul > li > a:hover{
+        border-top: none;
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width:630px){
+    .sandwhich-icon{
+        display: block!important;
+        width: 40px;
+        height: 25px;
+        border-top: 5px solid purple;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+        content: none;
+    }
+    .sandwhich-icon::before{
+        display: block!important;
+        width: 40px;
+        border-top: 5px solid purple;
+        position: absolute;
+        margin-top: 5px;
+        content: "";
+    }
+    .sandwhich-icon::after{
+        display: block!important;
+        width: 40px;
+        position: absolute;
+        margin-top: 15px;
+        content: "";
+        border-top: 5px solid purple;
+    }
+}
+#menu-toggle{
+    display: none;
+}
+.sandwhich-icon{
+    display: none;
+    position: relative;
 }
 header nav ul {
     display: flex;

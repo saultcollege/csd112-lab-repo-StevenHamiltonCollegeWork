@@ -27,7 +27,9 @@
 <body>
     <div class="width-wrap">
         <header id="top">
-            <nav>
+            <nav id="navbar">
+                <input type="checkbox" id="menu-toggle">
+                <label class ="sandwhich-icon"for="menu-toggle"></label>
                 <ul style="padding: 0%;">
                     <li>
                         <a class="nav-links" style="border-top: 4px solid #7b4f17;" href="index.html">Home</a>
@@ -61,7 +63,7 @@
                     </a>
                 <p>Hello, I am Steven i enjoy programming</p>
                 <p>I also enjoy playing games.</p>
-                <table>
+                <table id="schooltable">
                     <caption>Table 1. Current Courses</caption>
                     <thead>
                         <tr>
@@ -142,7 +144,7 @@
                 </table>
             </div>
             <h2>My Favourite Things</h2>
-                <div class="favourites">
+                <div class="favourites" id="favourites">
                     <input type="radio" id="tab2" name="checked" checked>
                     <label for="tab2">
                         <h3>Best Game</h3>

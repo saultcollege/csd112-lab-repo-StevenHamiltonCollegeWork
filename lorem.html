@@ -28,6 +28,12 @@
         footer {
             clear: both;
         }
+        @media only screen and (max-width: 640px) {
+            .lorempic1, .lorempic2{
+                display: block;
+            }
+            
+        }
     </style>
     <title>CSD112-Steven Hamilton</title>
     <!-- Great work! -->
@@ -37,6 +43,8 @@
     <div class="width-wrap">
         <header id="top">
             <nav>
+                <input type="checkbox" id="menu-toggle">
+                <label class ="sandwhich-icon"for="menu-toggle"></label>
                 <ul style="padding: 0%;">
                     <li><a class="nav-links" style="border-top: 4px solid #7b4f17;" href="index.html">Home</a>
                     </li>
@@ -58,7 +66,7 @@
         <main>
             <h1>Lorem Ipsum</h1>
             <p>
-                <img style="float: right;" src="https://loremflickr.com/320/240" alt="Random picture of a cat" />
+                <img id="lorempic1" src="https://loremflickr.com/320/240" alt="Random picture of a cat" />
             </p>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -81,7 +89,7 @@
                 vitae auctor eu augue. Urna molestie at elementum eu facilisis sed odio.
             </p>
             <p>
-                <img src="https://loremflickr.com/320/240/dog" alt="Random picture of a dog" />
+                <img id="lorempic2" src="https://loremflickr.com/320/240/dog" alt="Random picture of a dog" />
             </p>
         </main>
         <footer>
