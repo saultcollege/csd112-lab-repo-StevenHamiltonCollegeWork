@@ -124,7 +124,7 @@ a[href="#top"]:hover{
 }
 .gallery{
     display: grid;
-    grid-template-columns: repeat( auto-fill,minmax(180px, auto));
+    grid-template-columns: repeat( auto-fill,minmax(180px, 1fr));
     grid-row-gap: 10px;
     grid-column-gap: 10px;
 }
@@ -135,33 +135,6 @@ a[href="#top"]:hover{
     }
 }
 
-@media screen and (max-width: 640px) {
-    #schooltable > th, tfoot, thead{
-        display: none;
-    }
-    #schooltable{
-        caption-side: top;
-    }
-    #schooltable, td{
-        display: block;
-        padding-bottom: 0;
-        padding-top: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    } 
-    #schooltable > tr > td:first-child{
-        padding-top: 0.3em;
-        font-weight: bold;
-    }
-    #schooltable > tr > td:last-child{
-        padding-bottom: 0.3em;
-        font-style: italic;
-        font-size: 0.8em;
-    }
-    #schooltable, td::after{
-        content: " hrs/wk";
-    }   
-}
 @media only screen and (max-width: 800px) {
     #favourites{
         flex-direction: column;
@@ -216,26 +189,23 @@ a:link{
 a:visited{
     color: purple;
 }
-@media screen and (max-width:630px) {
-    #navbar > ul {
-        flex-direction: column;
-        align-items: center;
-        height: 0;
-        overflow: hidden;
-    }
-    #navbar > ul > li > a {
-        padding-top: 0.5em;
-        border-top: none;
-    }
-    #navbar > ul > li > a:hover{
-        border-top: none;
-        text-decoration: underline;
-    }
+
+#menu-toggle{
+    display: none;
+}
+.sandwich-icon{
+    display: none;
+    position: relative;
 }
 
 @media screen and (max-width:630px){
-    .sandwhich-icon{
-        display: block!important;
+
+    #menu-toggle:checked + .sandwich-icon + ul {
+        height: 200px;
+    }
+
+    .sandwich-icon{
+        display: block;
         width: 40px;
         height: 25px;
         border-top: 5px solid purple;
@@ -246,29 +216,22 @@ a:visited{
         cursor: pointer;
         content: none;
     }
-    .sandwhich-icon::before{
-        display: block!important;
+    .sandwich-icon::before{
+        display: block;
         width: 40px;
         border-top: 5px solid purple;
         position: absolute;
         margin-top: 5px;
         content: "";
     }
-    .sandwhich-icon::after{
-        display: block!important;
+    .sandwich-icon::after{
+        display: block;
         width: 40px;
         position: absolute;
         margin-top: 15px;
         content: "";
         border-top: 5px solid purple;
     }
-}
-#menu-toggle{
-    display: none;
-}
-.sandwhich-icon{
-    display: none;
-    position: relative;
 }
 header nav ul {
     display: flex;
@@ -278,6 +241,42 @@ header nav ul {
     margin: 0;
     padding: 0; 
 }
+
+header nav ul > li > a {
+    letter-spacing: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-top: 16px;
+    padding-bottom: 0.5em;
+    display: flex;
+    margin: -4px 1em 0 1em;
+    border-top: 4px solid transparent;
+}
+header nav ul > li > a:hover{
+    text-decoration: none;
+    border-top: 4px solid rgba(0, 0,0, 0.25);
+}
+
+@media screen and (max-width:630px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        height: 0;
+        overflow: hidden;
+        transition: height 200ms;
+    }
+    header nav ul > li > a {
+        padding-top: 0.5em;
+        border-top: none;
+    }
+    header nav ul > li > a:hover{
+        border-top: none;
+        text-decoration: underline;
+    }
+}
+
+
 header nav li{
     list-style-type: none;
 }
@@ -324,21 +323,37 @@ table{
     
 }
 
-.nav-links{
-    letter-spacing: 4px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding-top: 16px;
-    padding-bottom: 0.5em;
-    display: flex;
-    margin: -4px 1em 0 1em;
-    border-top: 4px solid transparent;
+
+@media screen and (max-width: 640px) {
+    #schooltable th, 
+    #schooltable tfoot, 
+    #schooltable thead {
+        display: none;
+    }
+    #schooltable{
+        caption-side: top;
+    }
+    #schooltable td{
+        display: block;
+        padding-bottom: 0;
+        padding-top: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    } 
+    #schooltable tr > td:first-of-type{
+        padding-top: 0.3em;
+        font-weight: bold;
+    }
+    #schooltable tr > td:last-child{
+        padding-bottom: 0.3em;
+        font-style: italic;
+        font-size: 0.8em;
+    }
+    #schooltable td::after{
+        content: " hrs/wk";
+    }   
 }
-.nav-links:hover{
-    text-decoration: none;
-    border-top: 4px solid rgba(0, 0,0, 0.25);
-}
+
 p::first-letter{
     font-size: 32px;
     font-family: serif;
